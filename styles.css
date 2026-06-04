@@ -11,6 +11,7 @@
   --gold: #f7c948;
   --blue: #2f6fed;
   --green: #1f9d63;
+  --violet: #6b4eff;
   --shadow: 0 18px 50px rgba(23, 32, 51, 0.13);
 }
 
@@ -43,7 +44,7 @@ a {
   justify-content: space-between;
   gap: 24px;
   padding: 14px clamp(18px, 4vw, 56px);
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.92);
   border-bottom: 1px solid rgba(223, 229, 238, 0.8);
   backdrop-filter: blur(18px);
 }
@@ -80,14 +81,15 @@ a {
 }
 
 .hero {
-  min-height: min(760px, calc(100vh - 66px));
+  min-height: min(720px, calc(100vh - 66px));
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(320px, 560px);
   align-items: center;
   gap: clamp(28px, 5vw, 72px);
   padding: clamp(40px, 7vw, 92px) clamp(18px, 4vw, 56px) 40px;
   background:
-    linear-gradient(132deg, rgba(215, 243, 229, 0.95), rgba(223, 242, 255, 0.86) 54%, rgba(255, 255, 255, 0.9)),
+    radial-gradient(circle at 86% 18%, rgba(247, 201, 72, 0.22), transparent 30%),
+    linear-gradient(132deg, rgba(215, 243, 229, 0.95), rgba(223, 242, 255, 0.88) 48%, rgba(255, 255, 255, 0.94)),
     var(--mist);
 }
 
@@ -156,6 +158,13 @@ p {
   font-weight: 800;
   text-decoration: none;
   box-shadow: 0 10px 26px rgba(23, 32, 51, 0.08);
+  transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
+}
+
+.button:hover {
+  transform: translateY(-1px);
+  border-color: rgba(47, 111, 237, 0.38);
+  box-shadow: 0 14px 30px rgba(23, 32, 51, 0.12);
 }
 
 .button.primary {
@@ -172,7 +181,7 @@ p {
 .hero-art img {
   width: 100%;
   display: block;
-  border: 10px solid rgba(255, 255, 255, 0.82);
+  border: 10px solid rgba(255, 255, 255, 0.88);
   border-radius: 8px;
   box-shadow: var(--shadow);
 }
@@ -190,6 +199,7 @@ p {
   border: 1px solid rgba(223, 229, 238, 0.84);
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.68);
+  backdrop-filter: blur(10px);
 }
 
 .stat strong {
@@ -241,6 +251,12 @@ p {
   border-radius: 8px;
   background: var(--paper);
   box-shadow: 0 12px 30px rgba(23, 32, 51, 0.06);
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 38px rgba(23, 32, 51, 0.1);
 }
 
 .card p {
@@ -269,6 +285,12 @@ p {
 .badge.gold {
   background: #fff2bf;
   color: #9c6b00;
+}
+
+.studio-band {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.65), rgba(245, 247, 251, 1)),
+    var(--mist);
 }
 
 .split {
