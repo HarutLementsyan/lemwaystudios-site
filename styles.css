@@ -267,6 +267,23 @@ p {
   color: var(--muted);
 }
 
+.support-email {
+  margin-top: 8px;
+  color: var(--ink);
+  font-size: clamp(1.35rem, 2.2vw, 2.25rem);
+  font-weight: 900;
+  line-height: 1.12;
+  overflow-wrap: anywhere;
+}
+
+.support-email a {
+  text-decoration: none;
+}
+
+.support-email a:hover {
+  color: var(--gold);
+}
+
 .badge {
   display: inline-flex;
   align-items: center;
